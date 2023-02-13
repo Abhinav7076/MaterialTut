@@ -35,43 +35,53 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { AboutComponent } from './component/about/about.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './component/home/home.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'about', component: AboutComponent},
+]
+
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-        MatButtonModule,
-        MatIconModule,
-        MatCardModule,
-        MatTabsModule,
-        MatSidenavModule,
-        MatListModule,
-        MatToolbarModule,
-        MatTooltipModule,
-        MatInputModule,
-        MatTableModule,
-        MatPaginatorModule,
-        MatSortModule,
-        MatProgressSpinnerModule,
-        MatStepperModule,
-        MatDialogModule,
-        AppRoutingModule,
-        MatSelectModule,
-        MatCheckboxModule,
-        DragDropModule,
-        MatRadioModule,
-        MatSliderModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        ReactiveFormsModule,
-        MatGridListModule,
-        MatTreeModule,
-        ScrollingModule
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatTabsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatStepperModule,
+    MatDialogModule,
+    AppRoutingModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    DragDropModule,
+    MatRadioModule,
+    MatSliderModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatTreeModule,
+    ScrollingModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
