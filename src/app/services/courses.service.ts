@@ -14,11 +14,11 @@ export class CoursesService {
     }
 
     findCourseById(courseId: number): Observable<Course> {
-        return this.http.get<Course>(`/api/courses/${courseId}`);
+        return this.http.get<Course>(`localhost/9000/api/courses/${courseId}`);
     }
 
     findAllCourses(): Observable<Course[]> {
-        return this.http.get('/api/courses')
+        return this.http.get('http://localhost:9000/api/courses')
             .pipe(
                 map(res => res['payload'])
             );

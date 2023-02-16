@@ -30,6 +30,8 @@ export class HomeComponent implements OnInit {
             map(courses => courses.filter(course => course.category === 'ADVANCED') )
         );
 
+        console.log(courses$)
+
     }
 
 }
