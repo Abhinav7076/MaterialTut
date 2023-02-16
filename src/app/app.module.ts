@@ -37,6 +37,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { AboutComponent } from './component/about/about.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './component/home/home.component';
+import { CoursesService } from './services/courses.service';
+import { CoursesCardListComponent } from './component/courses-card-list/courses-card-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -47,12 +49,14 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    CoursesCardListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
@@ -83,7 +87,10 @@ const appRoutes: Routes = [
     ScrollingModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [
+    CoursesService,
+    // CourseResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
