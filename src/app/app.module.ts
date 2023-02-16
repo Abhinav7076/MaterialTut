@@ -39,10 +39,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './component/home/home.component';
 import { CoursesService } from './services/courses.service';
 import { CoursesCardListComponent } from './component/courses-card-list/courses-card-list.component';
+import { CourseComponent } from './component/course/course.component';
+import { CourseResolver } from './services/courses.resolver';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
+  { path: 'courses/:id', component: CourseComponent, resolve: {course: CourseResolver}}
 ]
 
 @NgModule({
@@ -50,7 +53,8 @@ const appRoutes: Routes = [
     AppComponent,
     AboutComponent,
     HomeComponent,
-    CoursesCardListComponent
+    CoursesCardListComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +93,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     CoursesService,
-    // CourseResolver
+    CourseResolver
   ],
   bootstrap: [AppComponent]
 })

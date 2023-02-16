@@ -1,0 +1,11 @@
+<mat-card [ngStyle]="{margin: '20px 50px'}">
+    <mat-card-header>
+        <mat-card-title>{{course.description}}</mat-card-title>
+    </mat-card-header>
+
+    <img mat-card-image [src]="course.iconUrl">
+
+    <mat-card-content>
+        <p>{{course.longDescription}}</p>
+    </mat-card-content>
+</mat-card>

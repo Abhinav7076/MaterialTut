@@ -6,11 +6,11 @@
     <img mat-card-image [src]="course.iconUrl" >
 
     <mat-card-content>
-        <p>{{course.description}}</p>
+        <p>{{course.longDescription}}</p>
     </mat-card-content>
 
     <mat-card-actions [ngStyle]="{textAlign: 'center'}">
-        <button mat-raised-button color="primary">VIEW COURSE</button>
-        <button mat-raised-button color="accent">EDIT COURSE</button>
+        <button mat-raised-button color="primary" [routerLink]="['courses', course.id]">VIEW COURSE</button>
+        <button mat-raised-button color="accent" (click)="editCourse(course)">EDIT COURSE</button>
     </mat-card-actions>
 </mat-card>
