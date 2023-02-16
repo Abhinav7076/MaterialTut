@@ -41,11 +41,15 @@ import { CoursesService } from './services/courses.service';
 import { CoursesCardListComponent } from './component/courses-card-list/courses-card-list.component';
 import { CourseComponent } from './component/course/course.component';
 import { CourseResolver } from './services/courses.resolver';
+import { CreateCourseComponent } from './component/create-course/create-course.component';
+import { CreateCourseStepAComponent } from './component/create-course/create-course-step-a/create-course-step-a.component';
+import { CreateCourseStepBComponent } from './component/create-course/create-course-step-b/create-course-step-b.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'courses/:id', component: CourseComponent, resolve: {course: CourseResolver}}
+  { path: 'courses/:id', component: CourseComponent, resolve: {course: CourseResolver}},
+  { path: 'add-new-course', component: CreateCourseComponent}
 ]
 
 @NgModule({
@@ -54,7 +58,10 @@ const appRoutes: Routes = [
     AboutComponent,
     HomeComponent,
     CoursesCardListComponent,
-    CourseComponent
+    CourseComponent,
+    CreateCourseComponent,
+    CreateCourseStepAComponent,
+    CreateCourseStepBComponent
   ],
   imports: [
     BrowserModule,

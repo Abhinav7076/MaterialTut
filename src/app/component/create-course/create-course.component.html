@@ -1,0 +1,23 @@
+<div class="courses-panel">
+    <h1>Add Course</h1>
+<mat-horizontal-stepper class="mat-elevation-z5" labelPosition="bottom" [linear]="true">
+    <mat-step errorMessage="Course details error">
+        <ng-template matStepLabel>Course Details</ng-template>
+        <app-create-course-step-a></app-create-course-step-a>
+        <div class="stepper-buttons">
+            <button mat-raised-button color="primary" matStepperNext>
+                Add Coursse Lessons
+            </button>
+        </div>
+    </mat-step>
+
+    <mat-step errorMessage="Course lessons error">
+        <ng-template matStepLabel>Add Course Lessons</ng-template>
+        <app-create-course-step-b></app-create-course-step-b>
+        <div class="stepper-buttons">
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button color="accent">Create Course</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>
+</div>
