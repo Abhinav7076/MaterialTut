@@ -44,6 +44,7 @@ import { CourseResolver } from './services/courses.resolver';
 import { CreateCourseComponent } from './component/create-course/create-course.component';
 import { CreateCourseStepAComponent } from './component/create-course/create-course-step-a/create-course-step-a.component';
 import { CreateCourseStepBComponent } from './component/create-course/create-course-step-b/create-course-step-b.component';
+import { CourseDialogComponent } from './component/course-dialog/course-dialog.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
     CourseComponent,
     CreateCourseComponent,
     CreateCourseStepAComponent,
-    CreateCourseStepBComponent
+    CreateCourseStepBComponent,
+    CourseDialogComponent
   ],
   imports: [
     BrowserModule,
