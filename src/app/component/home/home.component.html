@@ -14,8 +14,10 @@
       <mat-tab-group>
   
           <mat-tab label="Beginners">
+
+              <mat-paginator class="mat-elevation-z5" [length]="(beginnerCourses$|async)?.length" [pageSize]="3" [pageSizeOptions]="[3, 5, 10]"></mat-paginator>
   
-              <app-courses-card-list [courses]="beginnerCourses$ | async">
+              <app-courses-card-list [courses]="currentBeginnerCourses | async">
   
   
               </app-courses-card-list>
